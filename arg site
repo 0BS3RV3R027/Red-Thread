@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch Effect</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .glitch {
+            font-size: 1rem;
+            font-weight: bold;
+            color: red;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        /* Create duplicate layers for glitch effect */
+        .glitch::before,
+        .glitch::after {
+            content: "WE ARE ECOES IN THE LOOP.";
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: red;
+            background: black;
+            overflow: hidden;
+            clip: rect(0, 900px, 0, 0);
+        }
+
+        /* Glitch animations */
+        .glitch::before {
+            left: 2px;
